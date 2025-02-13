@@ -1,13 +1,13 @@
 def calculate_investment_value(principal, years, rate):
 
-    return principal * (1 + rate/100) ** years
+    return int(principal * (1 + rate/100) ** years)
 
 def main():
     print("Wealth Calculator - Final investment value Estimation")
     
     # Get user input for the investment details
     try:
-        principal = float(input("Enter the initial investment amount: "))
+        principal = int(input("Enter the initial investment amount: "))
         years = int(input("Enter the number of years: "))
         rate = float(input("Enter the annual interest rate (in %): "))
     except ValueError:
